@@ -1,0 +1,15 @@
+
+.DS_Store
+.gitignore
+.idea/
+**/lib
+.classpath
+.project
+**/target
+data/
+idea-module-files/
+log/
+roles/
+temp/
+/bin/platform/
+/bin/ext-*
