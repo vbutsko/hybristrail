@@ -1,7 +1,14 @@
 package de.hybris.platform.cuppytrail.facades;
 
-/**
- * Created by wladek on 10/7/16.
- */
-public class StadiumFacade {
+import de.hybris.platform.cuppytrail.data.StadiumData;
+
+import java.util.List;
+
+
+public interface StadiumFacade
+{
+    StadiumData getStadium(String name);
+
+    List<StadiumData> getStadiums();
+
 }

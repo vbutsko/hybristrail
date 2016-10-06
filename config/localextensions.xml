@@ -18,7 +18,8 @@
         <extension name="mediaconversion" />     
         <extension name="cuppy"/>        
         <extension name="cuppytrail" /> 
-        <extension name="cuppytrailhmc" />                                    
+        <extension name="cuppytrailhmc" />        
+        <extension name="cuppytrailfrontend" />                            
                          
     </extensions>
 </hybrisconfig>
