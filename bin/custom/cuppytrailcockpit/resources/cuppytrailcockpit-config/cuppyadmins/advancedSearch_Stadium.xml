@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<advanced-search>
+    <group name="root" type="Stadium">
+        <property qualifier="Stadium.code" sort-enabled="true" visible="true"/>
+        <property qualifier="Stadium.capacity" sort-enabled="true" visible="true"/>
+        <property qualifier="Stadium.matches" sort-enabled="true" visible="true"/>
+    </group>
+</advanced-search>

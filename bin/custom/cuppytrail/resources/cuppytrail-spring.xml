@@ -31,6 +31,8 @@
 	<bean id="defaultStadiumFacade" class="de.hybris.platform.cuppytrail.facades.impl.DefaultStadiumFacade">
 		<property name="stadiumService" ref="stadiumService" />
 	</bean>
+
+	<bean id="sendRankingJob" class="de.hybris.platform.cuppytrail.jobs.SendRankingJob" autowire="byName"/>
 	<!--
 	The hybris platform provides one single Spring application context for beans located at the jalo layer.
 	Each extension can add beans to this context by specifying them at this configuration file.
