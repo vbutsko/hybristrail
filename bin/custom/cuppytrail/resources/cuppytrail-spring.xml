@@ -32,6 +32,15 @@
 		<property name="stadiumService" ref="stadiumService" />
 	</bean>
 
+	<bean id="stadiumCapacityInterceptor" class="de.hybris.platform.cuppytrail.interceptors.StadiumCapacityInterceptor"/>
+
+	<bean id="StadiumInterceptorMapping" class="de.hybris.platform.servicelayer.interceptor.impl.InterceptorMapping">
+		<property name="interceptor" ref="stadiumCapacityInterceptor" />
+		<property name="typeCode" value="Stadium" />
+	</bean>
+
+	<bean id="stadiumListener" class="de.hybris.platform.cuppytrail.events.StadiumEventListener" autowire="byName" />
+
 	<bean id="sendRankingJob" class="de.hybris.platform.cuppytrail.jobs.SendRankingJob" autowire="byName"/>
 	<!--
 	The hybris platform provides one single Spring application context for beans located at the jalo layer.
