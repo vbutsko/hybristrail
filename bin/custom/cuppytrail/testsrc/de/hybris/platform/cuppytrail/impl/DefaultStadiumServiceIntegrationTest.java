@@ -17,11 +17,9 @@ import javax.annotation.Resource;
 import org.junit.Before;
 import org.junit.Test;
 
-
 @IntegrationTest
 public class DefaultStadiumServiceIntegrationTest extends ServicelayerTransactionalTest
 {
-
     @Resource
     private StadiumService stadiumService;
     @Resource
@@ -46,10 +44,6 @@ public class DefaultStadiumServiceIntegrationTest extends ServicelayerTransactio
         stadiumService.getStadiumForCode(STADIUM_NAME);
     }
 
-    /**
-     * This test tests and demonstrates that the Service's getAllStadium method calls the DAOs' getAllStadium method and
-     * returns the data it receives from it.
-     */
     @Test
     public void testStadiumService()
     {
@@ -66,5 +60,4 @@ public class DefaultStadiumServiceIntegrationTest extends ServicelayerTransactio
         assertNotNull("No stadium found", persistedStadiumModel);
         assertEquals("Different stadium found", stadiumModel, persistedStadiumModel);
     }
-
 }

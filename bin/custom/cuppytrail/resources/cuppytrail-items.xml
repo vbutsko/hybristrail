@@ -49,6 +49,9 @@
                     <description>Capacity</description>
                     <persistence type="property" />
                 </attribute>
+                <attribute qualifier="stadiumImage" type="MediaContainer" >
+                    <persistence type="property"/>
+                </attribute>
             </attributes>
         </itemtype>
 
@@ -61,6 +64,15 @@
                     <defaultvalue>
                         de.hybris.platform.cuppytrail.constraints.NotEmptyCuppy.class
                     </defaultvalue>
+                </attribute>
+            </attributes>
+        </itemtype>
+
+        <itemtype code="MatchBet" autocreate="false" generate="false">
+            <attributes>
+                <attribute qualifier="matchScore" type="java.lang.Integer" >
+                    <persistence type="dynamic" attributeHandler="matchBetScoreAttributeHandler"/>
+                    <modifiers read="true" write="false"/>
                 </attribute>
             </attributes>
         </itemtype>

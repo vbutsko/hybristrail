@@ -44,7 +44,7 @@
 	<bean id="sendRankingJob" class="de.hybris.platform.cuppytrail.jobs.SendRankingJob" autowire="byName"/>
 
 
-	<!-- a ASK -->
+	<!-- TO ASK -->
 	<bean id="playerVoidInterceptorMapping" class="de.hybris.platform.servicelayer.interceptor.impl.InterceptorMapping">
 		<property name="interceptor" ref="VoidInterceptor" />
 		<property name="typeCode" value="Player" />

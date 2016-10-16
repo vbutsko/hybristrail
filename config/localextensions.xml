@@ -21,6 +21,7 @@
         <extension name="cuppytrailhmc" />        
         <extension name="cuppytrailfrontend" />
         <extension name="cuppytrailcockpit" />
+        <extension name="mediaconversion" />
                          
     </extensions>
 </hybrisconfig>

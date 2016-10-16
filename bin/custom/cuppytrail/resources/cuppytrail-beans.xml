@@ -40,6 +40,7 @@
 		<description>Data object representing a Stadium</description>
 		<property name="name" type="String"/>
 		<property name="capacity" type="String"/>
+		<property name="imageUrl" type="String"/>
 		<property name="matches" type="java.util.List&lt;de.hybris.platform.cuppytrail.data.MatchSummaryData>"/>
 	</bean>
 

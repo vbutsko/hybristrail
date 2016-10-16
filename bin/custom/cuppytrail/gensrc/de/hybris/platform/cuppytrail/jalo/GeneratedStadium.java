@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at Oct 16, 2016 12:38:18 PM                    ---
+ * --- Generated at Oct 16, 2016 8:42:27 PM                     ---
  * ----------------------------------------------------------------
  *  
  * [y] hybris Platform
@@ -24,6 +24,7 @@ import de.hybris.platform.jalo.GenericItem;
 import de.hybris.platform.jalo.Item.AttributeMode;
 import de.hybris.platform.jalo.SessionContext;
 import de.hybris.platform.jalo.enumeration.EnumerationValue;
+import de.hybris.platform.jalo.media.MediaContainer;
 import de.hybris.platform.jalo.type.CollectionType;
 import de.hybris.platform.util.OneToManyHandler;
 import java.util.Collection;
@@ -43,6 +44,8 @@ public abstract class GeneratedStadium extends GenericItem
 	public static final String CODE = "code";
 	/** Qualifier of the <code>Stadium.capacity</code> attribute **/
 	public static final String CAPACITY = "capacity";
+	/** Qualifier of the <code>Stadium.stadiumImage</code> attribute **/
+	public static final String STADIUMIMAGE = "stadiumImage";
 	/** Qualifier of the <code>Stadium.matches</code> attribute **/
 	public static final String MATCHES = "matches";
 	/**
@@ -64,6 +67,7 @@ public abstract class GeneratedStadium extends GenericItem
 		tmp.put(STADIUMTYPE, AttributeMode.INITIAL);
 		tmp.put(CODE, AttributeMode.INITIAL);
 		tmp.put(CAPACITY, AttributeMode.INITIAL);
+		tmp.put(STADIUMIMAGE, AttributeMode.INITIAL);
 		DEFAULT_INITIAL_ATTRIBUTES = Collections.unmodifiableMap(tmp);
 	}
 	@Override
@@ -251,6 +255,42 @@ public abstract class GeneratedStadium extends GenericItem
 	public void removeFromMatches(final Match value)
 	{
 		removeFromMatches( getSession().getSessionContext(), value );
+	}
+	
+	/**
+	 * <i>Generated method</i> - Getter of the <code>Stadium.stadiumImage</code> attribute.
+	 * @return the stadiumImage
+	 */
+	public MediaContainer getStadiumImage(final SessionContext ctx)
+	{
+		return (MediaContainer)getProperty( ctx, STADIUMIMAGE);
+	}
+	
+	/**
+	 * <i>Generated method</i> - Getter of the <code>Stadium.stadiumImage</code> attribute.
+	 * @return the stadiumImage
+	 */
+	public MediaContainer getStadiumImage()
+	{
+		return getStadiumImage( getSession().getSessionContext() );
+	}
+	
+	/**
+	 * <i>Generated method</i> - Setter of the <code>Stadium.stadiumImage</code> attribute. 
+	 * @param value the stadiumImage
+	 */
+	public void setStadiumImage(final SessionContext ctx, final MediaContainer value)
+	{
+		setProperty(ctx, STADIUMIMAGE,value);
+	}
+	
+	/**
+	 * <i>Generated method</i> - Setter of the <code>Stadium.stadiumImage</code> attribute. 
+	 * @param value the stadiumImage
+	 */
+	public void setStadiumImage(final MediaContainer value)
+	{
+		setStadiumImage( getSession().getSessionContext(), value );
 	}
 	
 	/**
