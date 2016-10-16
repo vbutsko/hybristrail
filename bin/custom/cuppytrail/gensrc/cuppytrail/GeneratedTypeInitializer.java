@@ -56,6 +56,16 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 			false
 		);
 	
+		createItemType(
+			"NotEmptyCuppyConstraint",
+			"AttributeConstraint",
+			de.hybris.platform.cuppytrail.constraints.NotEmptyCuppyConstraint.class,
+			null,
+			false,
+			null,
+			false
+		);
+	
 		createRelationType(
 			"StadiumMatchRelation",
 			null,
@@ -111,6 +121,8 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 			CollectionType.COLLECTION
 		);
 	
+				single_createattr_NotEmptyCuppyConstraint_annotation();
+			
 
 	}
 
@@ -162,6 +174,18 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG,
 					null,
 					sqlColumnDefinitions
+				);
+			
+	}
+	
+	public void single_createattr_NotEmptyCuppyConstraint_annotation() throws JaloBusinessException
+	{
+		
+				redeclareAttribute(
+					"NotEmptyCuppyConstraint", 
+					"annotation",
+					"java.lang.Class",
+					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.INITIAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG
 				);
 			
 	}
@@ -235,6 +259,21 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 			single_setAttributeProperties_Stadium_code();
 		
 			single_setAttributeProperties_Stadium_capacity();
+		
+				{
+				Map customPropsMap = new HashMap();
+				
+				setItemTypeProperties(
+					"NotEmptyCuppyConstraint",
+					false,
+					true,
+					true,
+					null,
+					customPropsMap
+				);
+				}
+			
+			single_setAttributeProperties_NotEmptyCuppyConstraint_annotation();
 		
 				setDefaultProperties(
 					"StadiumType",
@@ -311,6 +350,30 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 								false, 
 								null,
 								null,
+								null,
+								true,
+								true,
+								null,
+								customPropsMap,
+								null
+							);
+						}
+					
+						public void single_setAttributeProperties_NotEmptyCuppyConstraint_annotation() throws JaloBusinessException
+						{
+							
+							
+							
+							Map customPropsMap = new HashMap();
+							
+							setAttributeProperties(
+								"NotEmptyCuppyConstraint", 
+								"annotation",
+								false, 
+								
+                        de.hybris.platform.cuppytrail.constraints.NotEmptyCuppy.class
+                    ,
+								"de.hybris.platform.cuppytrail.constraints.NotEmptyCuppy.class",
 								null,
 								true,
 								true,

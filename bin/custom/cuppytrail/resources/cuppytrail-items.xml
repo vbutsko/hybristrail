@@ -51,5 +51,18 @@
                 </attribute>
             </attributes>
         </itemtype>
+
+        <itemtype code="NotEmptyCuppyConstraint" autocreate="true" generate="true" extends="AttributeConstraint"
+                  jaloclass="de.hybris.platform.cuppytrail.constraints.NotEmptyCuppyConstraint">
+            <description>Custom constraint which checks for empty strings.</description>
+            <attributes>
+                <attribute qualifier="annotation" type="java.lang.Class" redeclare="true">
+                    <modifiers write="false" initial="true" optional="false"/>
+                    <defaultvalue>
+                        de.hybris.platform.cuppytrail.constraints.NotEmptyCuppy.class
+                    </defaultvalue>
+                </attribute>
+            </attributes>
+        </itemtype>
     </itemtypes>
 </items>
