@@ -1,0 +1,11 @@
+#Ant properties
+#Tue Sep 29 16:29:10 CEST 2015
+builddate=20150929 1629
+description=cuppytrailbackoffice
+group.id=de.hybris.platform
+module.name=platform-module
+name=cuppytrailbackoffice
+releasedate=20150908 0915
+vendor=hybris
+version=5.7.0.0-SNAPSHOT
+version.api=5.7.0

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+  ~ [y] hybris Platform
+  ~
+  ~ Copyright (c) 2000-2015 hybris AG
+  ~ All rights reserved.
+  ~
+  ~ This software is the confidential and proprietary information of hybris
+  ~ ("Confidential Information"). You shall not disclose such Confidential
+  ~ Information and shall use it only in accordance with the terms of the
+  ~ license agreement you entered into with hybris.
+  -->
+
+<config xmlns="http://www.hybris.com/cockpit/config">
+
+	<context component="explorer-tree" merge-by="module">
+		<n:explorer-tree xmlns:n="http://www.hybris.com/cockpitng/config/explorertree">
+			<n:navigation-node id="Cuppytrail">
+				<n:type-node id="Stadiums" code="Stadium" />
+			</n:navigation-node>
+		</n:explorer-tree>
+	</context>
+
+	<context type="Stadium" component="listview">
+		<list:list-view xmlns:list="http://www.hybris.com/cockpitng/component/listView">
+			<list:column qualifier="code"/>
+			<list:column qualifier="StadiumType"/>
+			<list:column qualifier="capacity"/>
+			<list:column qualifier="matches"/>
+			<list:column qualifier="modifiedtime"/>
+		</list:list-view>
+	</context>
+
+	<context type="Match" component="base">
+		<y:base xmlns:y="http://www.hybris.com/cockpit/config/hybris">
+			<y:labels>
+				<y:label>homeTeam?.name + ' - ' + guestTeam?.name</y:label>
+			</y:labels>
+		</y:base>
+	</context>
+
+    <context type="Stadium" component="simple-search">
+        <yss:simple-search xmlns:yss="http://www.hybris.com/cockpitng/config/simplesearch">
+            <yss:field name="code"/>
+            <yss:sort-field name="capacity" asc="true"/>
+        </yss:simple-search>
+    </context>
+
+	<context type="Stadium" component="advanced-search">
+		<as:advanced-search xmlns:as="http://www.hybris.com/cockpitng/config/advancedsearch" connection-operator="AND">
+			<as:field-list>
+				<as:field name="code" operator="contains" selected="true"/>
+				<as:field name="StadiumType" selected="true"/>
+				<as:field editor="java.lang.Long" name="pk" operator="equal" selected="false" sortable="false"/>
+			</as:field-list>
+			<as:sort-field name="code" asc="false" />
+		</as:advanced-search>
+	</context>
+
+	<context component="editor-area" type="Stadium">
+		<editorArea:editorArea xmlns:editorArea="http://www.hybris.com/cockpitng/component/editorArea" name="">
+			<editorArea:tab name="essentials">
+				<editorArea:section name="essentials">
+					<editorArea:attribute qualifier="code"/>
+					<editorArea:attribute qualifier="StadiumType"/>
+				</editorArea:section>
+				<editorArea:section name="data">
+					<editorArea:attribute qualifier="capacity"/>
+					<editorArea:attribute qualifier="matches"/>
+				</editorArea:section>
+				<editorArea:section name="media">
+					<editorArea:attribute qualifier="stadiumImage"/>
+				</editorArea:section>
+			</editorArea:tab>
+			<editorArea:tab name="dates">
+				<editorArea:section name="dates">
+					<editorArea:attribute qualifier="creationtime"/>
+					<editorArea:attribute qualifier="modifiedtime"/>
+				</editorArea:section>
+			</editorArea:tab>
+		</editorArea:editorArea>
+	</context>
+
+	<context type="Stadium" component="listview">
+		<list:list-view xmlns:list="http://www.hybris.com/cockpitng/component/listView">
+			<list:column spring-bean="previewListCellRenderer" width="26px"/>
+			<list:column qualifier="code"/>
+			<list:column qualifier="StadiumType"/>
+			<list:column qualifier="capacity"/>
+			<list:column qualifier="matches"/>
+			<list:column qualifier="modifiedtime"/>
+		</list:list-view>
+	</context>
+
+	<context type="Stadium" component="base">
+		<y:base xmlns:y="http://www.hybris.com/cockpit/config/hybris">
+			<y:labels>
+				<y:label>code</y:label>
+			</y:labels>
+			<y:preview urlQualifier="stadiumImage?.medias?.get(0)"/>
+		</y:base>
+	</context>
+
+	<context component="create-wizard" type="Stadium">
+		<wz:flow xmlns:wz="http://www.hybris.com/cockpitng/config/wizard-config" id="StadiumWizard" title="create.stadium.title">
+			<wz:prepare id="stadiumPrepare">
+				<wz:initialize property="newStadium" type="Stadium"/>
+			</wz:prepare>
+			<wz:step id="step1" label="create.stadium.general.label" sublabel="create.stadium.general.sublabel">
+				<wz:content id="step1.content">
+					<wz:property-list root="newStadium">
+						<wz:property qualifier="code"/>
+						<wz:property qualifier="capacity"/>
+					</wz:property-list>
+				</wz:content>
+				<wz:navigation id="step1.navigation">
+					<wz:cancel/>
+					<wz:done visible="!#empty(newStadium.code)">
+						<wz:save property="newStadium"/>
+					</wz:done>
+				</wz:navigation>
+			</wz:step>
+		</wz:flow>
+	</context>
+
+</config>
